@@ -6,6 +6,7 @@ import java.util.function.Predicate;
 
 import org.springframework.stereotype.Service;
 
+
 import com.yrrhelp.models.Product;
 
 @Service 
@@ -14,9 +15,9 @@ public class ProductService {
 	public List<Product> getAllProducts() {
 		
 		List<Product> listOfProducts = new ArrayList<>();
-		listOfProducts.add(new Product("123", "IPHONE X", "This is Awesome Iphone ", 400.4, "Apple Inc"));
-		listOfProducts.add(new Product("124", "Samsung Y", "This is Awesome Samsung ", 300.4, "Samsung Inc"));
-		listOfProducts.add(new Product("125", "LG Z", "This is Awesome LG ", 200.4, "LG Inc"));
+		listOfProducts.add(new Product("123", "Strawberry Shake", "This is super healthy ", 400, "Mc Donald"));
+		listOfProducts.add(new Product("124", "Chocolate Shake", "This is awesome shake ", 300, "Mc Donald"));
+		listOfProducts.add(new Product("125", "Apple Pie", "This is Fresh ", 200, "Food Panda"));
 
 		return listOfProducts;
 	}
@@ -30,4 +31,5 @@ public class ProductService {
 	public Product filterProducts(Predicate<Product> strategy) {
 		return getAllProducts().stream().filter(strategy).findFirst().orElse(null);
 	}
+
 }

@@ -5,11 +5,11 @@ public class Product {
 	private String id;
 	private String name;
 	private String description;
-	private double price;
+	private Integer price;
 	private String seller;
 	
 	
-	public Product(String id, String name, String description, double price, String seller) {
+	public Product(String id, String name, String description, Integer price, String seller) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -19,6 +19,11 @@ public class Product {
 	}
 	
 	
+	public Product() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public String getId() {
 		return id;
 	}
@@ -40,7 +45,7 @@ public class Product {
 	public double getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
+	public void setPrice(Integer price) {
 		this.price = price;
 	}
 	public String getSeller() {

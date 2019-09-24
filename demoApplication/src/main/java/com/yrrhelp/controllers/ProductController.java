@@ -20,7 +20,7 @@ public class ProductController {
  		model.addAttribute("products",productService.getAllProducts());
  		
 		  return "product_all";
-	  }
+      }
      
       @GetMapping("/{productId}")
       public String getProductById(Model model, @PathVariable("productId") String productId) {
@@ -28,4 +28,5 @@ public class ProductController {
     	  model.addAttribute("product",productService.getProductById(productId));
     	  return "product";
       }
+      
 }

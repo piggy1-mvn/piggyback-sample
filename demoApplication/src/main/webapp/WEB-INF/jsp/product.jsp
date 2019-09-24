@@ -12,7 +12,7 @@
 		<p>Seller :  ${product.seller} </p>  
         </div>
         <div class="panel-footer"> <button type="button" class="btn btn-primary btn-md"
-           onClick="location.href=' ' ">Buy</button></div>
+           onClick="location.href='${pageContext.request.contextPath }/cart/buy/${product.id}' ">Buy Now</button></div>
       </div>
     </div>
    
