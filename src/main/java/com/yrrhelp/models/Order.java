@@ -1,44 +1,24 @@
 package com.yrrhelp.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Entity
-@Table(name= "orders",schema = "database1")
 public class Order {
 	
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
-    private Long id;
-	
-	@Column(name="email")
-	private String email;
-	 
-	@Column(name="address") 
-    private String address;
-	
-	@Column(name="pincode") 
-    private int pincode;
-    
-    public Order(){
-    	
-    }
-    
-    public Order(String email, String address, int pincode) {
-    	this.email = email;
-    	this.address= address;
-    	this.pincode = pincode;
-    }
-
-    
+		private Long id;
+		private String email;
+	    private String address;
+	    private String pincode;
+	    
+	    
+	    public Order() {
+	    	
+	    }
+	    
+	    
+	    public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getEmail() {
 		return email;
 	}
@@ -51,12 +31,16 @@ public class Order {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public int getPincode() {
+
+
+	public String getPincode() {
 		return pincode;
 	}
-	public void setPincode(int pincode) {
+
+
+	public void setPincode(String pincode) {
 		this.pincode = pincode;
 	}
-    
-	
+		
+
 }
