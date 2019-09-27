@@ -8,7 +8,7 @@
 		<version>2.1.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.yrrhelp</groupId>
+	<groupId>com.incentives.piggyback</groupId>
 	<artifactId>demoApplication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>demoApplication</name>
@@ -17,18 +17,6 @@
 		<java.version>1.8</java.version>
 		<docker.image.prefix>piggy1</docker.image.prefix>
 	</properties>
-	<repositories>
-		<repository>
-			<id>piggy1-piggy_repo</id>
-			<url>https://packagecloud.io/piggy1/piggy_repo/maven2</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
 
 	<dependencies>
 	<dependency>
@@ -112,5 +100,5 @@
 		</plugins>
 	</build>
 
-	<packaging>war</packaging>
+<!-- 	<packaging>war</packaging> -->
 </project>
