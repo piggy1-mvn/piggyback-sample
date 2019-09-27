@@ -21,11 +21,9 @@ public class OfferServiceImpl implements OfferService {
 
 	@Override
 	public double getOfferValue(String code) {
-		OfferEntity offer =  offerAppRepository.findByOfferCode(code);
-		if(code!=null && !(code.isEmpty()) && offer!=null) {
-			if(offer.getOfferCode().equals(code)&& offer.getOfferStatus()=="ACTIVE") {
+	
+		if(offerAppRepository.findAll().size()!=0) {
 				return 10;
-			}
 		}
 		return 0;
 	}

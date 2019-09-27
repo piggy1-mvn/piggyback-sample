@@ -9,6 +9,4 @@ import com.incentives.piggyback.sampleApp.models.OfferEntity;
 @Repository("OfferAppRepository")
 public interface OfferAppRepository extends MongoRepository<OfferEntity, String>{
 
-	OfferEntity findByOfferCode(String offerCode);
-
 }
