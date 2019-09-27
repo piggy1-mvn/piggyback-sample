@@ -20,7 +20,7 @@ public class OfferServiceImpl implements OfferService {
 
 	@Override
 	public double getOfferValue(String code) {
-		if(offerAppRepository.findAll() != null) {
+		if(code!=null && !(code.isEmpty()) && offerAppRepository.findAll().size() != 0) {
 		return 10;
 		}
 		return 0;
