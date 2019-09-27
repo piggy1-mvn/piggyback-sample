@@ -14,10 +14,10 @@ public class PartnerRequestAdapter {
 		 PartnerOrder partnerOrder = new PartnerOrder();
 		 Location location = new Location();
 		 	partnerOrder.setPartnerId(Constant.partnerId);
-	        partnerOrder.setInitiatorUserId("123345678");
+	        partnerOrder.setInitiatorUserId(Constant.initiatorUserId);
 	        partnerOrder.setMaxOptimizations(3);
 	        partnerOrder.setOptimizationDuration(3600);
-	        partnerOrder.setOptimizationRadius(10);	
+	        partnerOrder.setOptimizationRadius(100);
 	        location.setLongitude(1.293014);
 	        location.setLatitude(103.774095);
 	        partnerOrder.setOrderLocation(location);

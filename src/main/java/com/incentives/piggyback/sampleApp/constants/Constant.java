@@ -8,11 +8,11 @@ public interface Constant {
 	
 	final String partnerDisplayName = "FOOD STORE";
 	
-	final String partnerRedirectUrl = "http://localhost:8080/";
+	final String partnerRedirectUrl = "http://108.59.87.44:8087/home";
 	
-	final String partnerId = "79a0f662-625e-424f-8e36-86232c56daa9";
+	final String partnerId = "924cbcf2-51c1-44da-8d9c-92e0b7e570cf";
 	
-	final String setInitiatorUserId ="123345678";
+	final String initiatorUserId ="123345678";
 	
 	
 }

@@ -1,7 +1,5 @@
-FROM openjdk:11
+FROM tomcat:8.5-alpine
 VOLUME /tmp
-ARG DEPENDENCY=target/dependency
-COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
-COPY ${DEPENDENCY}/META-INF /app/META-INF
-COPY ${DEPENDENCY}/BOOT-INF/classes /app
-ENTRYPOINT ["java","-cp","app:app/lib/*","com.incentives.piggyback.sampleApp.DemoApplication"]
+ARG DEPENDENCY=target
+COPY ${DEPENDENCY}/demoApplication-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps
+ENTRYPOINT [ "sh", "-c", "java -jar /usr/local/tomcat/webapps/demoApplication-0.0.1-SNAPSHOT.war" ]
