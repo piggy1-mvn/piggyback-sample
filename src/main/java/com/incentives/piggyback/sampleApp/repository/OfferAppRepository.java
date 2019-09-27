@@ -4,8 +4,11 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 import com.incentives.piggyback.sampleApp.models.Offer;
+import com.incentives.piggyback.sampleApp.models.OfferEntity;
 
 @Repository("OfferAppRepository")
-public interface OfferAppRepository extends MongoRepository<Offer, String>{
+public interface OfferAppRepository extends MongoRepository<OfferEntity, String>{
+
+	OfferEntity findByOfferCode(String offerCode);
 
 }
