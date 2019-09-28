@@ -1,0 +1,21 @@
+language: java
+
+sudo: false
+
+cache:
+  directories:
+  - "$HOME/.m2"
+
+
+services:
+- docker
+
+#before_install:
+
+install: skip
+
+script:
+- mvn clean package verify 
+- docker build -t piggy1/sampleapp .
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+- docker push piggy1/sampleapp
