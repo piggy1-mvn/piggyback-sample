@@ -8,7 +8,7 @@ public interface Constant {
 	
 	final String partnerDisplayName = "FOOD STORE";
 	
-	final String partnerRedirectUrl = "http://35.226.50.19:8087/home";
+	final String partnerRedirectUrl = "http://test.piggyback.ga:8087/home";
 	
 	final String partnerId = "be415beb-dcf9-40e7-9544-d0b9c25899b2";
 	
