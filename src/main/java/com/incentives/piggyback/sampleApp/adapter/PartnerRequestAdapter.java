@@ -17,9 +17,11 @@ public class PartnerRequestAdapter {
 	        partnerOrder.setInitiatorUserId(Constant.initiatorUserId);
 	        partnerOrder.setMaxOptimizations(3);
 	        partnerOrder.setOptimizationDuration(3600);
-	        partnerOrder.setOptimizationRadius(100);
-	        location.setLongitude(103.774095);
-	        location.setLatitude(1.293014);
+	        partnerOrder.setOptimizationRadius(1000);
+//	        location.setLongitude(103.774095);
+//	        location.setLatitude(1.293014);
+	        location.setLongitude(103.7689494);
+	        location.setLatitude(1.312175);
 	        partnerOrder.setOrderLocation(location);
 	        partnerOrder.setOrderStatus(Constant.ordeStatus);
 	        partnerOrder.setOrderType(Constant.orderType);
